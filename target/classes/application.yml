@@ -1,2 +1,15 @@
 server:
   port: 8080
+
+github:
+  client:
+    redirectUri: http://localhost:8080/callback
+    clientId: e11cb13c6975c2a8ba87
+    clientSecret: 5381889f198c59b9f6f0f256eb908c09eda6d8d3
+
+spring:
+  datasource:
+    url: jdbc:h2:~/community
+    username: sa
+    password: 123
+    driver-class-name: org.h2.Driver

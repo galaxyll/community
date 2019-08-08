@@ -1,0 +1,11 @@
+{
+  "groups": [
+    {
+      "name": "github.client",
+      "type": "com.ghhh.community.controller.AuthorizeController",
+      "sourceType": "com.ghhh.community.controller.AuthorizeController"
+    }
+  ],
+  "properties": [],
+  "hints": []
+}
