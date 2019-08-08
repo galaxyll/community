@@ -1,0 +1,9 @@
+/home/galaxy/GitRepos/community/src/main/java/com/ghhh/community/CommunityApplication.java
+/home/galaxy/GitRepos/community/src/main/java/com/ghhh/community/util/provider/GithubProvider.java
+/home/galaxy/GitRepos/community/src/main/java/com/ghhh/community/controller/IndexController.java
+/home/galaxy/GitRepos/community/src/main/java/com/ghhh/community/mapper/UserMapper.java
+/home/galaxy/GitRepos/community/src/main/java/com/ghhh/community/util/param/AccessTokenParam.java
+/home/galaxy/GitRepos/community/src/main/java/com/ghhh/community/model/User.java
+/home/galaxy/GitRepos/community/src/main/java/com/ghhh/community/controller/HelloController.java
+/home/galaxy/GitRepos/community/src/main/java/com/ghhh/community/controller/AuthorizeController.java
+/home/galaxy/GitRepos/community/src/main/java/com/ghhh/community/util/param/GithubUserParam.java
