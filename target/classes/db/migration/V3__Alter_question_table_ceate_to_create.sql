@@ -1,0 +1,1 @@
+alter table QUESTION alter column GMT_CEATE rename to GMT_CREATE;

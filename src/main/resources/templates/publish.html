@@ -29,6 +29,9 @@
             </form>
             <ul class="nav navbar-nav navbar-right">
 
+                <li>
+                    <a href="/">回到主页</a>
+                </li>
                 <li class="dropdown" th:if="${session.user}">
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
                        aria-expanded="false" th:text="${session.user.name}"> <span class="caret"></span></a>
@@ -52,21 +55,25 @@
             <div class="col-lg-9 col-md-12 col-sm-12 col-xs-12" >
                 <h2><span class="glyphicon glyphicon-send" aria-hidden="true"></span> 放飞问题</h2>
                 <hr>
-                <form action="">
+                <form action="/publish" method="post">
                     <div class="form-group">
                         <label for="title">问题标题</label>
-                        <input type="text" class="form-control" id="title" placeholder="输入你的问题标题">
+                        <input type="text" class="form-control" id="title" name="title" placeholder="输入你的问题标题"
+                               th:value="${title}">
                     </div>
                     <div class="form-group">
                         <label for="description">问题描述(必填)</label>
-                        <textarea type="text" class="form-control" id="description" placeholder="输入你的问题标题"
-                                  cols="30" rows="10"></textarea>
+                        <textarea type="text" class="form-control" id="description" name="description"
+                                  placeholder="输入你的问题标题"
+                                  cols="30" rows="10" th:text="${description}"></textarea>
                     </div>
                     <div class="form-group">
                         <label for="tag">添加标签</label>
-                        <input type="text" class="form-control" id="tag" name="tag" placeholder="输入问题标签，以逗号(,)分隔">
+                        <input type="text" class="form-control" id="tag" name="tag" placeholder="输入问题标签，以逗号(,)分隔"
+                               th:value="${tag}" >
                     </div>
 
+                    <span  class="alert alert-danger"  th:text="${error}" th:if="${error!=null}"></span>
                     <button type="submit" class="btn btn-success btn-publish">提交</button>
                 </form>
             </div>

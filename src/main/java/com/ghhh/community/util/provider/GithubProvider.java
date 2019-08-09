@@ -45,7 +45,6 @@ public class GithubProvider {
     public GithubUserParam getGithubUserInfo(String token)
     {
         OkHttpClient client = new OkHttpClient();
-
         Request request = new Request.Builder()
                 .url("https://api.github.com/user?access_token="+token)
                 .addHeader("Accept"," application/json")
