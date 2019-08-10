@@ -2,12 +2,16 @@ package com.ghhh.community.controller;
 
 import com.ghhh.community.mapper.UserMapper;
 import com.ghhh.community.model.User;
+import com.ghhh.community.service.QuestionService;
+import com.ghhh.community.util.param.QuestionParam;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 import javax.servlet.http.Cookie;
 import javax.servlet.http.HttpServletRequest;
+import java.util.List;
 
 /**
  * @author galaxy
@@ -18,9 +22,11 @@ public class IndexController {
 
     @Autowired
     private UserMapper userMapper;
+    @Autowired
+    private QuestionService questionService;
 
     @RequestMapping("/")
-    public String index(HttpServletRequest request)
+    public String index(HttpServletRequest request, Model model)
     {
         Cookie[] cookies = request.getCookies();
         if (cookies != null) {
@@ -35,6 +41,8 @@ public class IndexController {
                 }
             }
         }
+        List<QuestionParam> questionParamList = questionService.getQuestionAndUserList();
+        model.addAttribute("questions",questionParamList);
         return "index";
     }
 }

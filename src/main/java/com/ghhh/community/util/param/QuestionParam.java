@@ -1,14 +1,15 @@
-package com.ghhh.community.model;
+package com.ghhh.community.util.param;
 
+import com.ghhh.community.model.Question;
+import com.ghhh.community.model.User;
 import lombok.Data;
 
 /**
  * @author galaxy
- * @date 19-8-9 - 上午9:59
+ * @date 19-8-10 - 下午1:23
  */
 @Data
-public class Question {
-
+public class QuestionParam {
     private Integer id;
     private String title;
     private String description;
@@ -19,4 +20,5 @@ public class Question {
     private Integer viewCount;
     private Integer likeCount;
     private String tag;
+    private User user;
 }
